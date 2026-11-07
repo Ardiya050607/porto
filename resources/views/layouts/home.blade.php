@@ -45,7 +45,7 @@
                                 <img src="{{asset('images/logo-php-bg.png')}}" alt="" class="img">
                                 <img src="{{asset('images/logo-laravel-bg.png')}}" alt="" class="img">
                                 <img src="{{asset('images/vscode.png')}}" alt="" class="img">
-                                <img src="{{asset('images/js.png')}}" alt="" class="img">
+                                <img src="{{asset('images/Js.png')}}" alt="" class="img">
                             </div>
                 </div>
                     <div class="kanan">
