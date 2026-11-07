@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="hero">
-        <h1 class="judul1">Ardiya</h1>
+        <h1 class="judul1">ArdiyaDev</h1>
         <button class="hamburger" id="hamburger" aria-label="Buka menu">
         <span></span>
         <span></span>
