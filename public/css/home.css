@@ -12,6 +12,7 @@ html {
     scroll-padding-top: 0px;
 }
 /* Navbar saat berada di atas (transparan dengan blur) */
+/* Navbar saat berada di atas (transparan dengan blur) */
 .hero {
     align-items: center;
     display: flex;
@@ -27,19 +28,12 @@ html {
     background: rgba(1, 7, 54, 0.15);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease; /* Transisi halus */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transisi halus */
 }
 
 /* Navbar saat sudah melewati section home / masuk ke section about */
 .hero.scrolled {
-    background: rgba(
-        15,
-        23,
-        42,
-        0.95
-    ); /* Warna lebih solid/gelap sesuai tema */
+    background: #010736; /* Warna lebih solid/gelap sesuai tema */
     border-bottom: 1px solid #334155;
 }
 .klikatas {
@@ -52,10 +46,11 @@ html {
     border-radius: 15px;
     font-weight: bold;
     justify-content: center;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 .klikatas:hover {
     background-color: blueviolet;
-    color: black;
+    color: white;
 }
 /* HAMBURGER DESKTOP */
 .hamburger {
@@ -673,6 +668,7 @@ html {
     border-radius: 28px;
     box-shadow: 0 0 35px 5px rgba(168, 85, 247, 0.7);
     padding: 35px 28px;
+    margin-top: 40px;
     box-sizing: border-box;
 }
 

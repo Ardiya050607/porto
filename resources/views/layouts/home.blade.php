@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="hero">
-        <h1 class="judul1">ArdiyaDev</h1>
+        <h1 class="judul1">Ardiya</h1>
         <button class="hamburger" id="hamburger" aria-label="Buka menu">
         <span></span>
         <span></span>
@@ -29,7 +29,7 @@
                 <div class="kiri">
                     <strong class="dev">I'M A BEGINNER PROGRAMMER</strong>
                         <div class="judul-group">
-                            <h1 class="judul">Ardiya shifwah </h1>
+                            <h1 class="judul">Ardiya Shifwah Nugraha</h1>
                         </div>
                             <h3 class="k">I build things for the web.</h3>
                             <p class="dec">I am a beginner programmer 
@@ -287,6 +287,17 @@
             navBar.classList.remove('active');
             });
         });
+        /* --- SCRIPT NAVBAR MENYESUAIKAN SAAT SCROLL --- */
+window.addEventListener('scroll', function() {
+    const heroNav = document.querySelector('.hero');
+    
+    // Jika posisi scroll ke bawah lebih dari 50 pixel
+    if (window.scrollY > 50) {
+        heroNav.classList.add('scrolled');
+    } else {
+        heroNav.classList.remove('scrolled');
+    }
+});
     </script>   
 </body>
 </html> 
