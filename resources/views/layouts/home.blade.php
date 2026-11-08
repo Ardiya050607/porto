@@ -30,7 +30,7 @@
                 <div class="kiri">
                     <strong class="dev">I'M A BEGINNER PROGRAMMER</strong>
                         <div class="judul-group">
-                            <h1 class="judul">Ardiya Shifwah Nugraha </h1>
+                            <h1 class="judul">Ardiya shifwah </h1>
                         </div>
                             <h3 class="k">I build things for the web.</h3>
                             <p class="dec">I am a beginner programmer 
