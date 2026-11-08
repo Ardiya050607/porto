@@ -31,11 +31,6 @@ html {
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Transisi halus */
 }
 
-/* Navbar saat sudah melewati section home / masuk ke section about */
-.hero.scrolled {
-    background: #010736; /* Warna lebih solid/gelap sesuai tema */
-    border-bottom: 1px solid #334155;
-}
 .klikatas {
     display: flex;
     color: white;
@@ -65,7 +60,6 @@ html {
     display: block;
     width: 27px;
     height: 3px;
-    background-color: white;
     margin: 5px;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -226,13 +220,13 @@ html {
 
 /* --- Variabel Warna Dark Mode --- */
 [data-theme="dark"] {
-    --bg-color: #0f172a;       /* Latar belakang utama gelap elegan */
+    --bg-color: #010736;       /* Latar belakang utama gelap elegan */
     --text-color: #f8fafc;     /* Teks putih terang */
     --text-muted: #ffffff;     /* Teks abu-abu redup */
     --card-bg: #0f172a;        /* Latar kartu / section card */
     --card-border: #334155;    /* Warna garis batas */
-    --hero-bg: #0f172a;
-    --nav-bg: rgba(15, 23, 42, 0.95);
+    --hero-bg: #010736;
+    --nav-bg: #010736;
     --shadow-color: rgba(117, 110, 110, 0.4);
 }
 /* Mencegah kedipan atau transisi saat halaman pertama kali dimuat */
@@ -587,7 +581,7 @@ body {
 }
 .tte {
     letter-spacing: 2;
-    font-weight: 900;
+    font-weight: 500;
 }
 .peraihan {
     margin-bottom: 20px;
@@ -884,10 +878,13 @@ body {
     }
     .hamburger {
         display: block;
-        background: transparent;
         border: none;
         cursor: pointer;
-        z-index: 10001;
+        z-index: 9999;
+        background-color: #010736;
+        border-radius: 5px;
+        margin-left: 10px;
+
     }
     .hamburger span {
         display: block;
@@ -904,7 +901,7 @@ body {
         top: 70px;
         left: 0;
         width: 100%;
-        background: rgba(1, 7, 54, 0.97);
+        border-bottom: 1px solid black;
         backdrop-filter: blur(20px);
         flex-direction: column;
         gap: 0;

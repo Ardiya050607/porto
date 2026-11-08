@@ -168,22 +168,20 @@
                         <div class="judul-group-achievement">
                             <strong class="header-achievement">- ACHIEVEMENT -</strong>
                             <h2 class="tte">TRAINING & EXPERIENCE</h2>
-                            <span class="peraihan">A range of experiences and achievements in frontend development,
-                            UI/UX design, and modern web application projects.</span>
                         </div>
                     </div>
                     <div class="pemisah-sertif">
                         <div class="card-sertif">  
                             <img src="{{ asset('images/kasyr.jpg') }}" alt="" class="foto-sertif">
                             <div class="teks">
-                            <strong >UI & UX Certificate</strong>
+                            <h2 class="z">UI & UX Certificate</h2>
                             </div>
         </div>
         <div class="card-sertif">
       
             <img src="{{ asset('images/ujikom.jpg') }}" alt="" class="foto-sertif">
             <div class="teks">
-            <strong ">Vocational Competency Test Certificate</strong>
+            <h2 class="z">Vocational Competency Test Certificate</h2>
             </div>
         </div>
     </div>
