@@ -1,4 +1,3 @@
-
 * {
     text-decoration: none;
     padding: 0;
@@ -12,6 +11,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 0px;
 }
+/* Navbar saat berada di atas (transparan dengan blur) */
 .hero {
     align-items: center;
     display: flex;
@@ -20,14 +20,29 @@ html {
     padding: 0 60px;
     border-bottom: 1px solid #1f1f1f;
     position: fixed;
+    top: 0;
+    left: 0;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     z-index: 9999;
     background: rgba(1, 7, 54, 0.15);
-       /* Efek blur */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease; /* Transisi halus */
 }
-.klikatas{
+
+/* Navbar saat sudah melewati section home / masuk ke section about */
+.hero.scrolled {
+    background: rgba(
+        15,
+        23,
+        42,
+        0.95
+    ); /* Warna lebih solid/gelap sesuai tema */
+    border-bottom: 1px solid #334155;
+}
+.klikatas {
     display: flex;
     color: white;
     margin: 10px;
@@ -38,7 +53,7 @@ html {
     font-weight: bold;
     justify-content: center;
 }
-.klikatas:hover{
+.klikatas:hover {
     background-color: blueviolet;
     color: black;
 }
@@ -65,7 +80,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 45px;   
+    gap: 45px;
 }
 .nav-bar a {
     font-weight: bold;
@@ -95,17 +110,17 @@ html {
     align-items: center;
     justify-content: space-between;
     padding: 50px 8%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     gap: 50px;
     border-bottom: 1px solid #1f1f1f;
     background-color: #010736;
 }
 /* LAYAR KIRI */
 .kiri {
-   flex: 1;
+    flex: 1;
     max-width: 600px;
 }
-.dev{
+.dev {
     display: inline-block;
     background: rgba(139, 92, 246, 0.15);
     color: blueviolet;
@@ -114,16 +129,16 @@ html {
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 30px;
-    margin-top: 50px;   
+    margin-top: 50px;
 }
-.judul-group{
+.judul-group {
     display: flex;
     color: #8b5cf6;
 }
-.judul1{
+.judul1 {
     color: white;
 }
-.judul{
+.judul {
     margin-bottom: 10px;
     font-size: clamp(35px, 5vw, 30px);
     font-weight: bold;
@@ -132,10 +147,8 @@ html {
     margin: 10px;
     color: white;
 }
-.k{
-      background: linear-gradient(
-        to right,white 35%
-    );
+.k {
+    background: linear-gradient(to right, white 35%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 3px;
@@ -143,30 +156,28 @@ html {
     margin-bottom: 15px;
     margin: 10px;
 }
-.dec{
-          background: linear-gradient(
-        to right,white 35%
-    );
+.dec {
+    background: linear-gradient(to right, white 35%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
-      font-size: 14px;
+    font-size: 14px;
     line-height: 1.8;
     color: #555;
     max-width: 550px;
 }
-.alat{
-      color: gray;
+.alat {
+    color: gray;
     margin: 10px;
     font-weight: bold;
     width: 10px;
 }
-.logo{
+.logo {
     margin: 10px;
     display: flex;
 }
-.img{
+.img {
     max-width: 40px;
 }
 /*gambar*/
@@ -191,8 +202,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    filter: drop-shadow(0 0 15px #8b5cf6)
-    drop-shadow(0 0 2px #fff);
+    filter: drop-shadow(0 0 15px #8b5cf6) drop-shadow(0 0 2px #fff);
 }
 /* Posisi gambar di depan lingkaran */
 .konten {
@@ -201,7 +211,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 100%;   
+    height: 100%;
 }
 .ganteng {
     width: 600px;
@@ -210,33 +220,33 @@ html {
     display: block;
 }
 /*aboutme*/
-.container-aboutme{
+.container-aboutme {
     width: 100%;
     min-height: 100vh;
-    font-family: 'inter', sans-serif;
+    font-family: "inter", sans-serif;
     padding: 100px 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
 }
-.judul-aboutme{
+.judul-aboutme {
     align-items: center;
     color: black;
     font-size: 20px;
     margin-bottom: 10px;
 }
-.deklar-aboutme{
-  color: gray;
+.deklar-aboutme {
+    color: gray;
     font-family: Arial, Helvetica, sans-serif;
 }
 /*about*/
-.container-pendidikan{
+.container-pendidikan {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     width: 100%;
     max-width: 1100px;
     min-height: 20vh;
@@ -244,26 +254,29 @@ html {
     padding: 30px;
     border-bottom: 1px solid #010736;
     box-sizing: border-box;
-
 }
 .left {
     flex: 1;
     display: flex;
     justify-content: center;
 }
-.smea{
+.smea {
     width: 300%;
     max-width: 500px;
     height: 300px;
     object-fit: cover;
     margin-left: 40px;
     border-radius: 20px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
     background-color: rgb(255, 255, 255);
     filter: drop-shadow(0 0 10px rgb(129, 0, 249));
 }
-.right{  flex: 1;}
-.about-me{
+.right {
+    flex: 1;
+}
+.about-me {
     padding: 15px;
     display: inline-block;
     background: rgba(139, 92, 246, 0.15);
@@ -273,12 +286,12 @@ html {
     letter-spacing: 3px;
     margin: 5px;
 }
-.smk{
+.smk {
     font-size: 20px;
     color: black;
-    margin: 10px ;
+    margin: 10px;
 }
-.smk-text{
+.smk-text {
     font-size: 14px;
     line-height: 1.8;
     color: gray;
@@ -289,7 +302,7 @@ html {
 .container-portofolio {
     width: 100%;
     min-height: 100vh;
-    font-family: 'inter', sans-serif;
+    font-family: "inter", sans-serif;
     padding: 100px 8%;
     display: flex;
     flex-direction: column;
@@ -306,9 +319,8 @@ html {
     font-size: 30px;
     color: rgb(1, 1, 1);
     margin-bottom: 10px;
-       font-family: 'Montserrat', sans-serif;
-       font-weight: bold;
-    
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 .deklarasi {
@@ -331,22 +343,22 @@ html {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-      background-color: rgb(255, 255, 255);
-     filter: drop-shadow(0 0 10px rgb(129, 0, 249));
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 10px rgb(129, 0, 249));
     transition: 0.3s ease;
 }
 .card-images:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-.foto{
+.foto {
     width: 100%;
     transition: 0.5s ease-in-out;
 }
 .foto:hover {
     transform: scale(1.1);
 }
-.status{
+.status {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -394,7 +406,7 @@ html {
     background-color: blueviolet;
 }
 /*service*/
-.service{
+.service {
     width: 100%;
     min-height: 100vh;
     padding: 100px 8%;
@@ -402,111 +414,109 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    
 }
-.header-service{
+.header-service {
     text-align: center;
-    width: 100%; 
-    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
 }
-.my-service{
+.my-service {
     font-size: 10px;
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: gray;
 }
-.group-service-judul{
+.group-service-judul {
     display: flex;
     justify-content: center;
 }
-.judul-service{
+.judul-service {
     font-weight: 200;
 }
-.desain{
+.desain {
     font-weight: 600;
     margin-left: 10px;
     color: #010736;
     filter: drop-shadow(0 0 10px rgb(129, 0, 249));
     margin-bottom: 10px;
 }
-.pemisah-service{
+.pemisah-service {
     justify-content: center;
     align-items: stretch;
     display: flex;
     width: 100%;
     gap: 30px;
 }
-.card-service{
+.card-service {
     width: 300px;
     background-color: rgb(255, 255, 255);
-     filter: drop-shadow(0 0 10px rgb(129, 0, 249));
+    filter: drop-shadow(0 0 10px rgb(129, 0, 249));
     margin-bottom: 10px;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
     transition: 0.3s ease;
 }
-.card-service:hover{
+.card-service:hover {
     transform: translateX(-10);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-.picture{
+.picture {
     width: 100%;
 }
 /*achiv*/
-.container-achievement{
+.container-achievement {
     width: 100%;
     min-height: 100vh;
-    font-family: 'inter', sans-serif;
+    font-family: "inter", sans-serif;
     padding: 100px 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
 }
-.achievement{
+.achievement {
     text-align: center;
     margin-bottom: 20px;
 }
-.header-achievement{
-  text-align: center;
+.header-achievement {
+    text-align: center;
     width: 100%;
     color: gray;
-
 }
-.judul-group-achievement{
+.judul-group-achievement {
     align-items: center;
     flex-direction: column;
     display: flex;
     gap: 15px;
 }
-.tte{
+.tte {
     letter-spacing: 2;
     font-weight: 900;
 }
-.peraihan{
+.peraihan {
     margin-bottom: 20px;
     color: gray;
 }
 .pemisah-sertif {
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 30px;
     width: 100%;
 }
-.card-sertif{
+.card-sertif {
     width: 400px;
     background-color: white;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
     transition: 0.3s ease;
-      background-color: rgb(255, 255, 255);
-     filter: drop-shadow(0 0 10px rgb(129, 0, 249));
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 10px rgb(129, 0, 249));
 }
-.foto-sertif{
-     width: 100%;
+.foto-sertif {
+    width: 100%;
     transition: 0.5s ease-in-out;
 }
 .foto-sertif:hover {
@@ -521,18 +531,18 @@ html {
     align-items: center;
     justify-content: space-between;
     padding: 50px 8%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     gap: 50px;
     border-bottom: 1px solid black;
 }
 
 /* LAYAR KIRI */
 .kiri-contact {
-   flex: 1;
+    flex: 1;
     max-width: 600px;
 }
 
-.header-contact{
+.header-contact {
     display: inline-block;
     color: gray;
     padding: 10px 15px;
@@ -541,20 +551,19 @@ html {
     margin-top: 20px;
     letter-spacing: 2px;
     margin: 10px;
-    
 }
-.header-contacts{
+.header-contacts {
     margin: 20px;
 }
-.judul-contact{
+.judul-contact {
     margin-bottom: 10px;
     font-size: 40px;
     font-weight: bold;
     align-items: center;
     justify-content: center;
-      filter: drop-shadow(0 0 10px rgb(129, 0, 249));
+    filter: drop-shadow(0 0 10px rgb(129, 0, 249));
 }
-.deks-contact{
+.deks-contact {
     color: gray;
     letter-spacing: 3px;
     font-size: 10px;
@@ -608,7 +617,7 @@ html {
 .linkedin-logo {
     width: 45px;
     height: 45px;
-    background: #0A66C2;
+    background: #0a66c2;
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -640,7 +649,7 @@ html {
     transform: translateY(-5px) scale(1.1);
 }
 .kanan {
-     flex: 1;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -648,7 +657,7 @@ html {
 }
 
 .kanan-contact {
-     flex: 1;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -677,22 +686,22 @@ html {
     height: 100%;
     align-items: center;
 }
-.judul-input{
+.judul-input {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-.input{
+.input {
     margin-bottom: 10px;
 }
-.input-1{
-    width: 100%;           
-    padding: 14px 18px;    
-    font-size: 15px;    
-    font-family: Arial, Helvetica, sans-serif;   
-    border-radius: 8px;    
+.input-1 {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
 }
-.submit{
+.submit {
     width: 100%;
     padding: 5px;
     border-radius: 10px;
@@ -700,21 +709,21 @@ html {
     transition: all 0.3s ease;
     font-weight: bold;
 }
-.submit:hover{
+.submit:hover {
     background-color: blueviolet;
     transform: translateY(-2px);
     color: black;
 }
 /*footer*/
-.container-footer{
+.container-footer {
     width: 100%;
     text-align: center;
     background-color: #010736;
 }
-.copyright{
+.copyright {
     color: white;
 }
-.pemisah-footer{
+.pemisah-footer {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -723,21 +732,20 @@ html {
 }
 
 /*scroll bar*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 5px;
 }
 /*jalurnya*/
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: #010736;
 }
 /*jalur yang di scroll*/
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: #f8f8fa;
     border-radius: 50px;
 }
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background-color: #031179;
-
 }
 .fade-out {
     opacity: 0;
@@ -807,7 +815,6 @@ html {
 }
 /*home*/
 @media screen and (max-width: 768px) {
-
     .container {
         flex-direction: column-reverse;
         text-align: center;
@@ -850,7 +857,6 @@ html {
 }
 /*aboutme dan eduu*/
 @media screen and (max-width: 768px) {
-
     .container-aboutme {
         padding: 70px 20px;
         min-height: auto;
@@ -897,7 +903,6 @@ html {
 }
 /*porto service*/
 @media screen and (max-width: 768px) {
-
     .container-portofolio,
     .service {
         padding: 70px 20px;
@@ -948,7 +953,6 @@ html {
 }
 /*achievement dan kontak*/
 @media screen and (max-width: 768px) {
-
     .container-achievement {
         padding: 70px 20px;
         min-height: auto;
@@ -1028,7 +1032,6 @@ html {
 }
 /*hp kecil*/
 @media screen and (max-width: 480px) {
-
     .judul1 {
         font-size: 21px;
     }
