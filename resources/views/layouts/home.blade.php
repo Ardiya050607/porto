@@ -107,7 +107,6 @@
                                 A system designed to facilitate academic processes at universities, 
                                 featuring course registration (KRS), online examinations, and academic transcripts (KHS).
                                 </p>
-                                <a href="portofolio">View Detail</a>
                             </div>
                         </div>
                     </div>
