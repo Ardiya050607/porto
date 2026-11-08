@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ardiya Shifwah Nugraha — Web Developer & Portfolio</title>
+    <meta name="description" content="Portofolio resmi Ardiya Shifwah Nugraha, seorang Web Developer berpengalaman yang berspesialisasi dalam pengembangan web menggunakan PHP, Laravel, dan manajemen server mandiri (VPS).">
+    <meta name="keywords" content="Ardiya Shifwah Nugraha, Sipa Nugraha, Web Developer Indonesia, Laravel Developer, PHP Developer, Portfolio Web, Ardiya Dev">
+    <meta name="author" content="Ardiya Shifwah Nugraha">
+    
+    <!-- Open Graph / Media Sosial (Opsional agar tampil menarik saat dibagikan) -->
+    <meta property="og:title" content="Ardiya Shifwah Nugraha — Web Developer & Portfolio">
+    <meta property="og:description" content="Jelajahi portofolio proyek web, karya, dan keahlian pengembangan aplikasi menggunakan PHP dan Laravel di sini.">
+    <meta property="og:type" content="website">
+
+    <!-- Font Awesome & CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="{{asset('css/home.css')}}?v={{ time() }}">
-    <title>Portofolio.</title>
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}?v={{ time() }}">
 </head>
 <body>
     <section class="hero">
