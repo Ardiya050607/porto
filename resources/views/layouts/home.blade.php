@@ -36,6 +36,9 @@
                 <a href="#contact">Contact</a>
             </div>
                 <a href="#" class="klikatas">Hire Me!</a>
+                  <button class="theme-toggle" id="themeToggle" aria-label="Ganti Tema">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
     </section>
             <div class="container">
                 <div class="kiri">
@@ -155,7 +158,7 @@
                                     I am very interested in creating intuitive and visually appealing user interfaces 
                                     that ultimately provide a comfortable and enjoyable user experience.
                                     </p>
-                                    <a href="#">View</a>
+                                    <a href="#" class="viewq">View</a>
                                 </div>
                         </div>
                     </div>
@@ -215,19 +218,19 @@
                                 <form action="#" method="post">
                                     <span class="judul-input">Name</span>
                                     <div class="input">
-                                        <input class="input-1" type="text" name="name" id="name" placeholder="Masukkan Nama">
+                                        <input class="input-1" type="text" name="name" id="name">
                                     </div>
                                     <span class="judul-input">Email</span>
                                     <div class="input">
-                                        <input class="input-1" type="text" name="Email" id="Email" placeholder="nama@gmail.com">
+                                        <input class="input-1" type="text" name="Email" id="Email" >
                                     </div>
                                     <span class="judul-input">Phone number</span>
                                     <div class="input">
-                                        <input class="input-1" type="tel" name="number" id="number" placeholder="Nomor Handphone">
+                                        <input class="input-1" type="tel" name="number" id="number" >
                                     </div>
                                     <span class="judul-input">Message</span>
                                     <div class="input">
-                                        <input class="input-1" type="text" name="message" id="message" placeholder="Message">
+                                        <input class="input-1" type="text" name="message" id="message">
                                     </div>
                                     <input type="submit" name="submit" class="submit">
                                 </form>
@@ -308,6 +311,48 @@ window.addEventListener('scroll', function() {
     } else {
         heroNav.classList.remove('scrolled');
     }
+});
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const htmlElement = document.documentElement;
+
+// 1. Cek preferensi tema yang tersimpan saat halaman pertama kali dimuat
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
+    htmlElement.setAttribute('data-theme', 'dark');
+    if (themeIcon) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+}
+
+// 2. Event listener saat tombol toggle diklik dengan efek transisi dari kiri atas
+themeToggle.addEventListener('click', function() {
+    // Tambahkan kelas animasi ke body agar efek clip-path berjalan
+    document.body.classList.add('animating-theme');
+
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    
+    // Ubah tema tepat di tengah-tengah animasi (misal: 300ms)
+    setTimeout(() => {
+        if (currentTheme === 'dark') {
+            htmlElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            if (themeIcon) {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        } else {
+            htmlElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            if (themeIcon) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+    }, 500);
+
+    // Hapus kelas animasi setelah durasi animasi selesai (800ms)
+    setTimeout(() => {
+        document.body.classList.remove('animating-theme');
+    }, 50);
 });
     </script>   
 </body>
