@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    
     <title>Portofolio</title>
 </head>
 <body>
@@ -99,7 +100,7 @@
                     </div>
                     <div class="pemisah">
                         <div class="card-images">
-                            <span class="status">UNFINISHED</span>
+
                             <img src="{{ asset('images/siganteng.png') }}" alt="" class="foto">
                             <div class="teks">
                                 <h2>SiGanteng - UNIVERSITAS BHAMADA SLAWI</h2>
@@ -107,7 +108,7 @@
                                 A system designed to facilitate academic processes at universities, 
                                 featuring course registration (KRS), online examinations, and academic transcripts (KHS).
                                 </p>
-                                <a href="maintenance">View Project</a>
+                                <a href="portofolio">View Detail</a>
                             </div>
                         </div>
                     </div>
@@ -201,7 +202,26 @@
                     <div class="kanan-contact">
                         <div class="card-contact">
                             <div class="konten-contact">
-                                <img src="{{ asset('images/back-bg.png') }}" alt="Foto Ardiya" class="back">
+                                <form action="#" method="post">
+                                    <span class="judul-input">Name</span>
+                                    <div class="input">
+                                        <input class="input-1" type="text" name="name" id="name" placeholder="Masukkan Nama">
+                                    </div>
+                                    <span class="judul-input">Email</span>
+                                    <div class="input">
+                                        <input class="input-1" type="text" name="Email" id="Email" placeholder="nama@gmail.com">
+                                    </div>
+                                    <span class="judul-input">Phone number</span>
+                                    <div class="input">
+                                        <input class="input-1" type="tel" name="number" id="number" placeholder="Nomor Handphone">
+                                    </div>
+                                    <span class="judul-input">Message</span>
+                                    <div class="input">
+                                        <input class="input-1" type="text" name="message" id="message" placeholder="Message">
+                                    </div>
+                                    <input type="submit" name="submit" class="submit">
+                                </form>
+                                <!-- <img src="{{ asset('images/back-bg.png') }}" alt="Foto Ardiya" class="back"> -->
                             </div>
                         </div>
                     </div>
