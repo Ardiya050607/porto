@@ -216,25 +216,36 @@
                     <div class="kanan-contact">
                         <div class="card-contact">
                             <div class="konten-contact">
-                                <form action="#" method="post">
-                                    <span class="judul-input">Name</span>
-                                    <div class="input">
-                                        <input class="input-1" type="text" name="name" id="name">
-                                    </div>
-                                    <span class="judul-input">Email</span>
-                                    <div class="input">
-                                        <input class="input-1" type="text" name="Email" id="Email" >
-                                    </div>
-                                    <span class="judul-input">Phone number</span>
-                                    <div class="input">
-                                        <input class="input-1" type="tel" name="number" id="number" >
-                                    </div>
-                                    <span class="judul-input">Message</span>
-                                    <div class="input">
-                                        <input class="input-1" type="text" name="message" id="message">
-                                    </div>
-                                    <input type="submit" name="submit" class="submit">
-                                </form>
+                                <form action="{{ route('contact.send') }}" method="POST">
+                                    @csrf <!-- Sangat wajib di Laravel -->
+
+                        <span class="judul-input">Name</span>
+                        <div class="input">
+                            <input class="input-1" type="text" name="name" id="name" required>
+                        </div>
+
+                        <span class="judul-input">Email</span>
+                        <div class="input">
+                            <input class="input-1" type="email" name="email" id="Email" required>
+                        </div>
+
+                        <span class="judul-input">Phone number</span>
+                        <div class="input">
+                    <input class="input-1" type="tel" name="number" id="number">
+                        </div>
+
+                        <span class="judul-input">Message</span>
+                        <div class="input">
+                            <textarea class="input-1" name="message" id="message" rows="4" required></textarea>
+                        </div>
+                        <input type="submit" name="submit" class="submit" value="Kirim Pesan">
+                        </form>
+                    <!-- Menampilkan notifikasi sukses jika pesan terkirim -->
+                            @if(session('success'))
+                        <script>
+                            alert("{{ session('success') }}");
+                        </script>
+                            @endif
                                 <!-- <img src="{{ asset('images/back-bg.png') }}" alt="Foto Ardiya" class="back"> -->
                             </div>
                         </div>
