@@ -254,8 +254,8 @@
             {
                 image: "{{ asset('images/bhamada.jpeg') }}",
                 alt: "Foto pendidikan kuliah",
-                title: "HIGHER EDUCATION (2026 - SEKARANG)",
-                description: "Sekarang saya menjadi mahasiswa Universitas Bhamada Slawi, saya mengembangkan kemampuan di bidang Informatika, khususnya pemrograman, pengembangan website, dan teknologi informasi."
+                title: "HIGHER EDUCATION (2026 - NOW)",
+                description: "I am currently a student at Bhamada Slawi University, where I am developing my skills in the field of Informatics—specifically in programming, website development, and information technology."
             },
         ];
         let currentSlide = 0;
