@@ -328,7 +328,6 @@ body {
     background-color: var(--card-border);
     transform: scale(1.05);
 }
-
 /*aboutme*/
 .container-aboutme {
     width: 100%;
@@ -873,8 +872,8 @@ body {
         justify-content: space-between;
         flex-wrap: nowrap;
     }
-    .judul1 {
-        font-size: 24px;
+    .judul1{
+        display: none;
     }
     .hamburger {
         display: block;

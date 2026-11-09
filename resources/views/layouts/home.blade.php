@@ -18,6 +18,8 @@
     <!-- Font Awesome & CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}?v={{ time() }}">
+    <!-- Kode link untuk logo/favicon di tab browser -->
+    <link rel="icon" href="{{ asset('images/logo.png') }}">
 </head>
 <body>
     <section class="hero">
@@ -111,6 +113,7 @@
                             <span class="deklarasi">
                             The following is a project that I have made
                             </span>
+                            <a href="#">View Detail</a>
                     </div>
                     <div class="pemisah">
                         <div class="card-images">
@@ -249,12 +252,12 @@
                 image: "{{ asset('images/smea.jpeg') }}",
                 alt: "Foto SMK Negeri 1 Slawi",
                 title: "VOCATIONAL EDUCATION (SMK) (2022 - 2025)",
-                description: "Saya merupakan lulusan SMK Negeri 1 Slawi tahun 2025 dengan jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Di sini saya mulai mempelajari dasar-dasar pemrograman dan pengembangan aplikasi."
+                description: "I am a 2025 graduate of SMK Negeri 1 Slawi, where I majored in Software and Game Development (PPLG). It was there that I began learning the fundamentals of programming and application development."
             },
             {
                 image: "{{ asset('images/bhamada.jpeg') }}",
                 alt: "Foto pendidikan kuliah",
-                title: "HIGHER EDUCATION (2026 - NOW)",
+                title: "HIGHER EDUCATION (2026 - 2030)",
                 description: "I am currently a student at Bhamada Slawi University, where I am developing my skills in the field of Informatics—specifically in programming, website development, and information technology."
             },
         ];
