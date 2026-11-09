@@ -203,7 +203,7 @@
                                                 <div class="instagram-dot"></div>
                                         </div>
                                     </a>
-                                        <a href="https://www.linkedin.com/in/sipa-nugraha-999777404/" target="_blank">
+                                        <a href="https://www.linkedin.com/in/ardiya-shifwah-nugraha-999777404/" target="_blank">
                                         <div class="linkedin-logo">
                                             <span>in</span>
                                         </div>
