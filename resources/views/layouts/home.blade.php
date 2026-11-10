@@ -216,8 +216,7 @@
                     <div class="kanan-contact">
                         <div class="card-contact">
                             <div class="konten-contact">
-                                <form action="{{ route('contact.send') }}" method="POST">
-                                    @csrf <!-- Sangat wajib di Laravel -->
+                                <form id="whatsappForm">
 
                         <span class="judul-input">Name</span>
                         <div class="input">
@@ -240,12 +239,6 @@
                         </div>
                         <input type="submit" name="submit" class="submit" value="Kirim Pesan">
                         </form>
-                    <!-- Menampilkan notifikasi sukses jika pesan terkirim -->
-                            @if(session('success'))
-                        <script>
-                            alert("{{ session('success') }}");
-                        </script>
-                            @endif
                                 <!-- <img src="{{ asset('images/back-bg.png') }}" alt="Foto Ardiya" class="back"> -->
                             </div>
                         </div>
@@ -366,6 +359,31 @@ themeToggle.addEventListener('click', function() {
         document.body.classList.remove('animating-theme');
     }, 50);
 });
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah form agar tidak reload halaman
+
+        // Ambil nilai dari setiap inputan
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let number = document.getElementById('number').value;
+        let message = document.getElementById('message').value;
+
+        // Nomor WhatsApp Anda (Ganti dengan nomor Anda, awali dengan kode negara misal 628...)
+        let phoneNo = "628950970337"; 
+
+        // Susun format pesan yang akan dikirim ke WhatsApp
+        let text = `Halo, saya ingin mengirim pesan dari website:\n\n` +
+                   `*Nama:* ${name}\n` +
+                   `*Email:* ${email}\n` +
+                   `*No. HP:* ${number}\n` +
+                   `*Pesan:* ${message}`;
+
+        // Ubah teks agar aman dibaca oleh URL (encoding)
+        let encodedText = encodeURIComponent(text);
+
+        // Buka link WhatsApp di tab/aplikasi baru
+        window.open(`https://wa.me/${phoneNo}?text=${encodedText}`, '_blank');
+    });
     </script>   
 </body>
 </html> 
