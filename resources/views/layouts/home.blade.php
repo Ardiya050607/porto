@@ -225,7 +225,7 @@
 
                         <span class="judul-input">Email</span>
                         <div class="input">
-                            <input class="input-1" type="email" name="email" id="Email" required>
+                            <input class="input-1" type="email" name="email" id="email" required>
                         </div>
 
                         <span class="judul-input">Phone number</span>
