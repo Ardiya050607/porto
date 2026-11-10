@@ -369,7 +369,7 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
         let message = document.getElementById('message').value;
 
         // Nomor WhatsApp Anda (Ganti dengan nomor Anda, awali dengan kode negara misal 628...)
-        let phoneNo = "628950970337"; 
+        let phoneNo = "6289507970337"; 
 
         // Susun format pesan yang akan dikirim ke WhatsApp
         let text = `Halo, saya ingin mengirim pesan dari website:\n\n` +
