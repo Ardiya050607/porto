@@ -372,7 +372,7 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
         let phoneNo = "6289507970337"; 
 
         // Susun format pesan yang akan dikirim ke WhatsApp
-        let text = `Halo, saya ingin mengirim pesan dari website:\n\n` +
+        let text = `${name} mengirim pesan dari website anda:\n\n` +
                    `*Nama:* ${name}\n` +
                    `*Email:* ${email}\n` +
                    `*No. HP:* ${number}\n` +
