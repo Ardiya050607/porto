@@ -10,3 +10,6 @@ Route::get('/', function () {
 Route::get('/portofolio', function () {
     return view('layouts/portofolio');
 })->name('portofolio');
+Route::get('/frontend', function () {
+    return view('layouts/frontend');
+})->name('frontend');

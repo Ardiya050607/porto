@@ -113,7 +113,6 @@
                             <span class="deklarasi">
                             The following is a project that I have made
                             </span>
-                            <a href="#">View Detail</a>
                     </div>
                     <div class="pemisah">
                         <div class="card-images">
@@ -161,7 +160,7 @@
                                     I am very interested in creating intuitive and visually appealing user interfaces 
                                     that ultimately provide a comfortable and enjoyable user experience.
                                     </p>
-                                    <a href="#" class="viewq">View</a>
+                                    <a href="#">View</a>
                                 </div>
                         </div>
                     </div>
@@ -239,10 +238,19 @@
                         </div>
                         <input type="submit" name="submit" class="submit" value="Kirim Pesan">
                         </form>
-                                <!-- <img src="{{ asset('images/back-bg.png') }}" alt="Foto Ardiya" class="back"> -->
                             </div>
                         </div>
                     </div>
+            </section>
+           <section class="container-maps">
+                <h1 class="teks-maps">Visit Our Office For In-person Meetings And Consultations</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3098.81678698309!2d109.14274999999999!3d-7.0227222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sid!2sid!4v1794347717663!5m2!1sid!2sid&q=-7.022732,109.142761" 
+                    width="100%" 
+                    height="400px" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </section>
             <section class="container-footer">
                 <div class="copyright">
@@ -384,6 +392,48 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
         // Buka link WhatsApp di tab/aplikasi baru
         window.open(`https://wa.me/${phoneNo}?text=${encodedText}`, '_blank');
     });
+    // Meminta izin akses lokasi pengguna
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                // Jika izin diberikan, ambil latitude dan longitude
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+
+                // Masukkan iframe Google Maps berdasarkan koordinat pengguna
+                var mapContainer = document.getElementById('map-container');
+                mapContainer.innerHTML = `
+                    <iframe 
+                        src="https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed" 
+                        width="100%" 
+                        height="450px" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                `;
+            },
+            function(error) {
+                // Jika pengguna menolak atau GPS mati, tampilkan lokasi default (misal: Monas)
+                console.warn("Gagal mendeteksi lokasi: " + error.message);
+                var mapContainer = document.getElementById('map-container');
+                mapContainer.innerHTML = `
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.300647304381!2d106.8249641747547!3d-6.229728793748286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e714f3b207%3A0x2964e5256e6d1e43!2sMonumen%20Nasional!3s!4v1700000000000!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="450px" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                `;
+            }
+        );
+    } else {
+        alert("Browser Anda tidak Mendukung Geolocation.");
+    }
     </script>   
 </body>
 </html> 
