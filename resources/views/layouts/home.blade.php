@@ -357,7 +357,6 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
         // Ambil nilai dari setiap inputan
         let name = document.getElementById('name').value;
         let email = document.getElementById('email').value;
-        let number = document.getElementById('number').value;
         let message = document.getElementById('message').value;
 
         // Nomor WhatsApp Anda (Ganti dengan nomor Anda, awali dengan kode negara misal 628...)
