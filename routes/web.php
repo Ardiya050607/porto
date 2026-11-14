@@ -13,3 +13,4 @@ Route::get('/portofolio', function () {
 Route::get('/frontend', function () {
     return view('layouts/frontend');
 })->name('frontend');
+

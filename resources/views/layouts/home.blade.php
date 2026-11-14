@@ -227,11 +227,6 @@
                             <input class="input-1" type="email" name="email" id="email" required>
                         </div>
 
-                        <span class="judul-input">Phone number</span>
-                        <div class="input">
-                    <input class="input-1" type="tel" name="number" id="number">
-                        </div>
-
                         <span class="judul-input">Message</span>
                         <div class="input">
                             <textarea class="input-1" name="message" id="message" rows="4" required></textarea>
@@ -314,17 +309,6 @@
             navBar.classList.remove('active');
             });
         });
-        /* --- SCRIPT NAVBAR MENYESUAIKAN SAAT SCROLL --- */
-window.addEventListener('scroll', function() {
-    const heroNav = document.querySelector('.hero');
-    
-    // Jika posisi scroll ke bawah lebih dari 50 pixel
-    if (window.scrollY > 50) {
-        heroNav.classList.add('scrolled');
-    } else {
-        heroNav.classList.remove('scrolled');
-    }
-});
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
 const htmlElement = document.documentElement;
@@ -383,7 +367,6 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
         let text = `${name} mengirim pesan dari website anda:\n\n` +
                    `*Nama:* ${name}\n` +
                    `*Email:* ${email}\n` +
-                   `*No. HP:* ${number}\n` +
                    `*Pesan:* ${message}`;
 
         // Ubah teks agar aman dibaca oleh URL (encoding)

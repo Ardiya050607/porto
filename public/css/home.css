@@ -12,7 +12,6 @@ html {
     scroll-padding-top: 0px;
 }
 /* Navbar saat berada di atas (transparan dengan blur) */
-/* Navbar saat berada di atas (transparan dengan blur) */
 .hero {
     align-items: center;
     display: flex;
@@ -21,7 +20,7 @@ html {
     padding: 0 60px;
     border-bottom: 1px solid #1f1f1f;
     position: fixed;
-    top: 0;
+    top: 0; 
     left: 0;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     z-index: 9999;
@@ -758,7 +757,7 @@ body {
     border-radius: 28px;
     box-shadow: 0 0 35px 5px rgba(168, 85, 247, 0.7);
     padding: 35px 28px;
-    margin-top: 10px;
+    margin-top: 50px;
     box-sizing: border-box;
 }
 
