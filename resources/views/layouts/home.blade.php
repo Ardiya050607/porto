@@ -37,7 +37,6 @@
                 <a href="#achievement">Achievement</a>
                 <a href="#contact">Contact</a>
             </div>
-                <a href="#" class="klikatas">Hire Me!</a>
                   <button class="theme-toggle" id="themeToggle" aria-label="Ganti Tema">
                     <i class="fa-solid fa-moon" id="themeIcon"></i>
                 </button>
@@ -48,13 +47,13 @@
                         <div class="judul-group">
                             <h1 class="judul">Ardiya Shifwah Nugraha</h1>
                         </div>
-                            <h3 class="k">I build things for the web.</h3>
+                            <h3 class="k">Frontend Developer & UI UX Design</h3>
                             <p class="dec">I am a beginner programmer 
                             with a strong passion for learning 
                             the world of programming, particularly in website development. 
-                            I am continuously developing my skills in HTML, CSS, PHP, Laravel, 
-                            and databases.
+                            I am continuously developing my skills in HTML, CSS, PHP, JavaScript and Framework Laravel.
                             </p>
+                            <a href="{{ asset('docs/CV-ARDIYA.pdf') }}" download="CV-ARDIYA.pdf" class="cv">Download CV</a>
                             <span class="alat">TECHNOLOGIES I WORK WITH</span>
                             <div class="logo">
                                 <img src="{{asset('images/html-logo-bg.png')}}" alt="" class="img">
@@ -63,7 +62,6 @@
                                 <img src="{{asset('images/logo-laravel-bg.png')}}" alt="" class="img">
                                 <img src="{{asset('images/vscode.png')}}" alt="" class="img">
                                 <img src="{{asset('images/Js.png')}}" alt="" class="img">
-                                <img src="{{asset('images/mysql.png')}}" alt="" class="img">
                             </div>
                 </div>
                     <div class="kanan">
@@ -144,12 +142,12 @@
                         <div class="card-service">
                             <img src="{{ asset('images/komputer.png') }}" alt="" class="picture">
                             <div class="teks">
-                                <h2>Frontend</h2>
+                                <h2>Frontend Developer</h2>
                                 <p>
                                 I provide creative and modern frontend development services
                                 focused on building responsive, attractive, and user-friendly websites.
                                 </p>
-                                <a href="#">View</a>
+                                <a href="#contact" class="hire">Hire Me</a>
                             </div>
                         </div>
                         <div class="card-service">
@@ -160,7 +158,7 @@
                                     I am very interested in creating intuitive and visually appealing user interfaces 
                                     that ultimately provide a comfortable and enjoyable user experience.
                                     </p>
-                                    <a href="#">View</a>
+                                    <a href="#contact" class="hire">Hire Me</a>
                                 </div>
                         </div>
                     </div>

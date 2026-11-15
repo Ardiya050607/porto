@@ -108,6 +108,23 @@ html {
     max-width: 600px;
     z-index: 1;
 }
+.cv{
+    display: block;
+    background-color: #d1d5db;
+    width: 130px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+.cv:hover{
+    background-color: blueviolet;
+    color: white;
+}
 .dev {
     display: inline-block;
     background: rgba(139, 92, 246, 0.15);
@@ -158,6 +175,9 @@ html {
     margin: 10px;
     font-weight: bold;
     width: 10px;
+}
+.hire{
+    font-weight: bold;
 }
 .logo {
     margin: 10px;
@@ -965,9 +985,13 @@ body {
     }
 
     .k {
-        font-size: 20px;
+        font-size: 32px;
     }
-
+    .cv{
+        font-size: 15px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
     .dec {
         font-size: 14px;
         line-height: 1.8;
