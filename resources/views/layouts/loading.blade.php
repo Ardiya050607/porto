@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ asset('css/loading.css') }}?v={{ time() }}">
-  <title>Memuat Website...</title>
+  <title>Loading Website</title>
 </head>
 <body>
 
   <div class="loader-content">
-    <div class="brand-logo"><span>Ardiyadev.</span></div>
+    <div class="brand-logo"><span>Ardiyadev</span></div>
 
     <div class="progress-wrapper">
       <!-- Karakter Maskot Interaktif -->
