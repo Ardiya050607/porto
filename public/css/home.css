@@ -108,27 +108,144 @@ html {
     max-width: 600px;
     z-index: 1;
 }
-.cv{
-    display: block;
-    background-color: #d1d5db;
-    width: 130px;
-    margin-bottom: 10px;
+.cv {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
     margin-left: 10px;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 3px solid rgb(255, 255, 255);
-    transition: all 0.3s;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.25s ease;
+    background: rgba(59, 130, 246, 0.16);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 4px solid blueviolet;
+    color: inherit;
 }
-.cv:hover{
-    background-color: blueviolet;
+
+.cv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px blueviolet;
+}
+
+.cv.is-downloading {
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.cv.is-downloading .cv-progress {
+    display: inline-block;
+}
+
+.cv-progress {
+    display: none;
+    font-variant-numeric: tabular-nums;
+    padding: 2px 7px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: rgba(59, 130, 246, 0.25);
+}
+
+/* Modal / Overlay Loading Persentase */
+.cv-loader-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.cv-loader-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cv-loader-card {
+    width: 100%;
+    max-width: 360px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0f172a;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    transform: translateY(10px) scale(0.98);
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Dukungan otomatis jika halaman memakai class .dark atau data-theme="dark" */
+:is(.dark, [data-theme="dark"]) .cv-loader-card {
+    background: rgba(15, 23, 42, 0.88);
+    color: #f8fafc;
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+.cv-loader-overlay.is-active .cv-loader-card {
+    transform: translateY(0) scale(1);
+}
+
+.cv-loader-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.cv-loader-title {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cv-loader-percent {
+    font-size: 1rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
     color: white;
+}
+
+.cv-progress-track {
+    width: 100%;
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(148, 163, 184, 0.25);
+}
+
+.cv-progress-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, white, blueviolet);
+    transition: width 0.14s ease-out;
+}
+
+.cv-loader-status {
+    margin: 10px 0 0;
+    font-size: 0.82rem;
+    opacity: 0.75;
 }
 .dev {
     display: inline-block;
     background: rgba(139, 92, 246, 0.15);
-    color: blueviolet;
+    filter: drop-shadow(0 0 10px blueviolet);
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 14px;
@@ -169,12 +286,14 @@ html {
     line-height: 1.8;
     color: #555;
     max-width: 550px;
+    
 }
 .alat {
     color: gray;
     margin: 10px;
     font-weight: bold;
-    width: 10px;
+    width: 500px;
+    display: block;
 }
 .hire{
     font-weight: bold;
@@ -355,6 +474,7 @@ body {
     padding: 100px 8%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 40px;
 }
