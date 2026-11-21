@@ -1107,12 +1107,16 @@ body {
     }
 
     .judul {
-  
+        font-size: 10px;
         margin: auto;
     }
 
     .k {
-        font-size: 20px;
+        font-size: 10px;
+        filter: drop-shadow(0 0 15px blueviolet);
+    }
+    .dec{
+        font-size: 10px;
     }
     .cv{
         font-size: 15px;
@@ -1315,7 +1319,7 @@ body {
         font-size: 12px;
     }
     .teks-maps{
-        font-size: 15px;
+        font-size: 10px;
     }
 }
 /*hp kecil*/

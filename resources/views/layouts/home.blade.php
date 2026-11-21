@@ -47,7 +47,7 @@
                         <div class="judul-group">
                             <h1 class="judul">Ardiya Shifwah Nugraha</h1>
                         </div>
-                            <h3 class="k">Frontend Developer & UI UX Design</h3>
+                            <h2 class="k">Frontend Developer & UI UX Design</h2>
                             <p class="dec">I am a beginner programmer 
                             with a strong passion for learning 
                             the world of programming, particularly in website development. 
