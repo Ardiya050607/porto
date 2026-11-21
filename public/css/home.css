@@ -292,7 +292,7 @@ html {
     color: gray;
     margin: 10px;
     font-weight: bold;
-    width: 500px;
+    width: 450px;
     display: block;
 }
 .hire{
@@ -1101,11 +1101,12 @@ body {
     }
 
     .judul {
-        font-size: clamp(27px, 8vw, 45px);
+        font-size: clamp(25px, 8vw, 37px);
+        margin: auto;
     }
 
     .k {
-        font-size: 32px;
+        font-size: 20px;
     }
     .cv{
         font-size: 15px;
@@ -1113,8 +1114,13 @@ body {
         margin-bottom: 10px;
     }
     .dec {
-        font-size: 14px;
-        line-height: 1.8;
+      
+    }
+    .alat{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
     .logo {
         justify-content: center;
