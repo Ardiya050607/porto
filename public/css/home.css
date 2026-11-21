@@ -110,12 +110,14 @@ html {
 }
 .cv {
     position: relative;
-    display: inline-flex;
+    display: flex;
+    width: 170px;
     align-items: center;
     justify-content: center;
     gap: 8px;
     padding: 12px 22px;
     margin-left: 10px;
+    margin-bottom: 10px;
     border-radius: 12px;
     font-weight: 600;
     text-decoration: none;
@@ -138,18 +140,8 @@ html {
     pointer-events: none;
     opacity: 0.85;
 }
-
-.cv.is-downloading .cv-progress {
-    display: inline-block;
-}
-
 .cv-progress {
     display: none;
-    font-variant-numeric: tabular-nums;
-    padding: 2px 7px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    background: rgba(59, 130, 246, 0.25);
 }
 
 /* Modal / Overlay Loading Persentase */
@@ -293,7 +285,6 @@ html {
     margin: 10px;
     font-weight: bold;
     width: 450px;
-    display: block;
 }
 .hire{
     font-weight: bold;
@@ -581,7 +572,7 @@ body {
 }
 
 /* CARD */
-.card-images {
+.siganteng {
     width: 500px;
     border-radius: 15px;
     position: relative;
@@ -590,9 +581,24 @@ body {
     filter: drop-shadow(0 0 10px rgb(129, 0, 249));
     transition: 0.3s ease;
 }
-.card-images:hover {
+.siganteng:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 15px #72BB38);
+}
+.porto-tasya{
+    width: 500px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 10px rgb(129, 0, 249));
+    transition: 0.3s ease;
+}
+.porto-tasya:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 10px #4BB8FA );
 }
 .foto {
     width: 100%;
@@ -1101,7 +1107,7 @@ body {
     }
 
     .judul {
-        font-size: clamp(25px, 8vw, 37px);
+  
         margin: auto;
     }
 
@@ -1113,11 +1119,7 @@ body {
         margin: auto;
         margin-bottom: 10px;
     }
-    .dec {
-      
-    }
     .alat{
-        display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
@@ -1210,7 +1212,7 @@ body {
         padding: 0;
     }
 
-    .card-images,
+    .siganteng,.porto-tasya,
     .card-service {
         width: 100%;
         max-width: 450px;
@@ -1311,6 +1313,9 @@ body {
 
     .copyright {
         font-size: 12px;
+    }
+    .teks-maps{
+        font-size: 15px;
     }
 }
 /*hp kecil*/

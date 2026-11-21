@@ -134,7 +134,7 @@
                             </span>
                     </div>
                     <div class="pemisah">
-                        <div class="card-images">
+                        <div class="siganteng">
 
                             <img src="{{ asset('images/siganteng.png') }}" alt="" class="foto">
                             <div class="teks">
